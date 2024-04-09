@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Motivational quotes</title>
+  </head>
+
+  <body>
+    <h1>Inspire Me</h1>
+
+    <form action="/quotes" method="POST">
+      <input type="text" placeholder="name" name="name" />
+      <input type="text" placeholder="quote" name="quote" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Quotes</h2>
+
+    <ul class="quotes">
+      <!-- Loop through quotes -->
+      <% for(var i = 0; i < quotes.length; i++) {%>
+      <li class="quote">
+        <!-- Output name from the iterated quote object -->
+        <span><%= quotes[i].name %></span>:
+        <!-- Output quote from the iterated quote object -->
+        <span><%= quotes[i].quote %></span>
+      </li>
+      <% } %>
+    </ul>
+    <div>
+      <h2>Need More inspiration?</h2>
+      <p>Replace Brene Brown's first quote with a Tony Robbins Quote</p>
+      <button id="update-button">Replace Brene's quote</button>
+    </div>
+    <div>
+      <h2>Want More Variety?</h2>
+      <p>
+        Tony keeps repeating himself. Let's remove his quote so we can add more
+        variety
+      </p>
+      <button id="delete-button">Delete Tony Robbins quote</button>
+    </div>
+    <div id="message"></div>
+    <script src="/main.js"></script>
+  </body>
+</html>
