@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Star Wars Quote App</title>
+    <title>Motivational Quote App</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
 
   <body>
-    <h1 data-position="header">May Node and Express be with you.</h1>
+    <h1 data-position="header">Motivational Quotes</h1>
 
     <section data-position="add-quote">
       <h2>Add quote</h2>
@@ -21,20 +21,23 @@
 
     <section data-position="update-quote">
       <div>
-        <h2>Darth Vadar invades!</h2>
-        <p>Replace first Yoda's quote with a quote written by Darth Vadar</p>
-        <button id="update-button">Replace Yoda's quote</button>
+        <h2>What Does Tony Robbins have to say?</h2>
+        <p>
+          Tony Keeps talking over Brene brown. Click the button to replace
+          Brene's first quote.
+        </p>
+        <button id="update-button">Replace Brene's Quote</button>
       </div>
     </section>
 
     <section data-position="delete-quote">
       <div>
-        <h2>Remove Darth Vadar!</h2>
+        <h2>Remove Tony Robbins Quote</h2>
         <p>
-          Delete one Darth Vadar's quote. Does nothing if there are no more
-          Darth Vadar's quote
+          It seems like Tony Robbins keeps repeating himself. Let's delete one
+          of his quotes to make room for others
         </p>
-        <button id="delete-button">Delete Darth Vadar's quote</button>
+        <button id="delete-button">Delete Tony Robbins quote</button>
       </div>
       <div id="message"></div>
     </section>
@@ -42,7 +45,7 @@
     <section data-position="quotes">
       <h2>Quotes</h2>
 
-      <ul class="quotes">
+      <ul class="quotes no-decoration">
         <% for(var i = 0; i < quotes.length; i++) {%>
         <li class="quote">
           <span><%= quotes[i].name %></span>:
