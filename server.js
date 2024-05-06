@@ -2,7 +2,7 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 require("dotenv").config;
-const connectionString = process.env.DB_STRING;
+const connectionString = process.env.PORT || 4000;
 
 const MongoClient = require("mongodb").MongoClient;
 MongoClient.connect(connectionString)
