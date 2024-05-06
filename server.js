@@ -67,7 +67,7 @@ MongoClient.connect(databaseUrl)
         .catch(error => console.error(error));
     });
 
-    app.listen(3000, function () {
+    app.listen(PORT, function () {
       console.log("Listening on 3000");
     });
   })
