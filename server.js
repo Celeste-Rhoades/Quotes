@@ -1,10 +1,11 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
-const connectionString = "";
+require("dotenv").config;
+const connectionString = process.env.DB_STRING;
 
 const MongoClient = require("mongodb").MongoClient;
-MongoClient.connect(connectionString, { useUnifiedTopology: true })
+MongoClient.connect(connectionString)
   .then(client => {
     console.log("Connected to Database");
     const db = client.db("Motivational-quotes");
