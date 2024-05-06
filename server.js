@@ -1,11 +1,11 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
-require("dotenv").config;
-const connectionString = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
+const databaseUrl = process.env.DATABASE_URL;
 
 const MongoClient = require("mongodb").MongoClient;
-MongoClient.connect(connectionString)
+MongoClient.connect(databaseUrl)
   .then(client => {
     console.log("Connected to Database");
     const db = client.db("Motivational-quotes");
